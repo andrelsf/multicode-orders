@@ -58,6 +58,12 @@
       <scope>runtime</scope>
     </dependency>
 
+    <!-- Database Migration Liquibase -->
+    <dependency>
+      <groupId>org.liquibase</groupId>
+      <artifactId>liquibase-core</artifactId>
+    </dependency>
+
     <!-- LOMBOK -->
     <dependency>
       <groupId>org.projectlombok</groupId>
