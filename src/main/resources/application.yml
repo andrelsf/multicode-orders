@@ -28,6 +28,14 @@ spring:
         show_sql: ${SPRING_JPA_PROPERTIES_SHOW_SQL:false}
         format_sql: ${SPRING_JPA_PROPERTIES_FORMAT_SQL:false}
     open-in-view: ${SPRING_JPA_OPEN_IN_VIEW:false}
+  liquibase:
+    enabled: ${SPRING_LIQUIBASE_ENABLED:true}
+    change-log: "liquibase/changelog.yml"
+    url: ${spring.datasource.url}
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+    drop-first: ${SPRING_LIQUIBASE_DROP_FIRST:false}
+    driver-class-name: ${spring.datasource.driver-class-name}
 
 logging:
   level:
