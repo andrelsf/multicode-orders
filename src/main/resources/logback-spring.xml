@@ -1,12 +1,14 @@
 <configuration scan="true" scanPeriod="30 seconds">
+  <import class="ch.qos.logback.classic.encoder.PatternLayoutEncoder"/>
+  <import class="ch.qos.logback.core.ConsoleAppender"/>
 
   <property name="DEFAULT_PATTERN"
     value="[%thread][%highlight(%-5level)][%cyan(%d{yyyy-MM-dd HH:mm:ss})][%yellow(%X{requestId})][%magenta(%logger{40})] - %message%n"/>
 
-  <appender name="ConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
-    <layout class="ch.qos.logback.classic.PatternLayout">
+  <appender name="ConsoleAppender" class="ConsoleAppender">
+    <encoder class="PatternLayoutEncoder">
       <Pattern>${DEFAULT_PATTERN}</Pattern>
-    </layout>
+    </encoder>
   </appender>
 
   <root level="INFO">
