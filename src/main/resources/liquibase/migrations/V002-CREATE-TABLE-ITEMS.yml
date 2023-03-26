@@ -18,6 +18,13 @@ databaseChangeLog:
                     primaryKey: true
                     nullable: false
               - column:
+                  name: order_id
+                  type: VARCHAR(33)
+                  autoIncrement: false
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
                   name: product_id
                   type: VARCHAR(33)
                   constraints:
@@ -36,5 +43,9 @@ databaseChangeLog:
             indexName: idx_items
             tableName: items
             columns:
+              - column:
+                  name: item_id
+              - column:
+                  name: order_id
               - column:
                   name: product_id
